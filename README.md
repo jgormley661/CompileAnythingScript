@@ -1,7 +1,7 @@
 Compile Anything script
 
-This script compiles AND/OR runs any of the following languages using the most popular, standard Linux compiler available
-for the given language
+This script compiles (if needed) then runs any of the following languages using the most popular, standard Linux compiler available
+for the given language (assuming you have the compiler installed)
 
 C, C++, Python, C-Sharp, Haskell, Rust, Java, Lua, Ruby, Javascript, PHP
 
