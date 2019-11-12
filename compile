@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Getting variables
+# Setting variables
 file=$1 #full file
 extension="${file##*.}" #extension
-filename="${file%.*}"
+filename="${file%.*}" #file name without extension
 
 confirm () {
     printf "Compiling/Running $extension file... \n\n"
