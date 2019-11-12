@@ -1,0 +1,77 @@
+#!/bin/bash
+
+# Getting variables
+file=$1 #full file
+extension="${file##*.}" #extension
+filename="${file%.*}"
+
+confirm () {
+    printf "Compiling/Running $extension file... \n\n"
+}
+
+# C
+if [ $extension = "c" ]; then
+    confirm
+    gcc $1 $2 $3 $4 $5 $6 $7 $8 $9
+    ./a.out
+
+#C++
+elif [ $extension = "cpp" ]; then
+    confirm
+    g++ $1 $2 $3 $4 $5 $6 $7 $8 $9
+    ./a.out
+
+#Python
+elif [ $extension = "py" ]; then
+    confirm
+    python3 $1 $2 $3 $4 $5 $6 $7 $8 $9
+
+#C Sharp
+elif [ $extension = "cs" ]; then
+    confirm
+    mcs $1 $2 $3 $4 $5 $6 $7 $8 $9
+    mono "$filename.exe"
+
+#Haskell
+elif [ $extension = "hs" ]; then
+    confirm
+    ghc $1 $2 $3 $4 $5 $6 $7 $8 $9
+    ./$filename
+
+#Rust
+elif [ $extension = "rs" ]; then
+    confirm
+    rustc $1 $2 $3 $4 $5 $6 $7 $8 $9
+    ./$filename
+
+#Java
+elif [ $extension = "java" ]; then
+    confirm
+    javac $1 $2 $3 $4 $5 $6 $7 $8 $9
+    java $filename
+
+#Lua
+elif [ $extension = "lua" ]; then
+    confirm
+    lua $1 $2 $3 $4 $5 $6 $7 $8 $9
+
+#Ruby
+elif [ $extension = "rb" ]; then
+    confirm
+    ruby $1 $2 $3 $4 $5 $6 $7 $8 $9
+
+#Javascript
+elif [ $extension = "js" ]; then
+    confirm
+    node $1 $2 $3 $4 $5 $6 $7 $8 $9
+
+#PHP
+elif [ $extension = "php" ]; then
+    confirm
+    php $1 $2 $3 $4 $5 $6 $7 $8 $9
+
+    
+else
+    echo "ERROR. unsupported file extension"
+fi
+
