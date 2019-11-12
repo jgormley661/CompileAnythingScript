@@ -15,57 +15,57 @@ if [ $extension = "c" ]; then
     gcc $1 $2 $3 $4 $5 $6 $7 $8 $9
     ./a.out
 
-#C++
+# C++
 elif [ $extension = "cpp" ]; then
     confirm
     g++ $1 $2 $3 $4 $5 $6 $7 $8 $9
     ./a.out
 
-#Python
+# Python
 elif [ $extension = "py" ]; then
     confirm
     python3 $1 $2 $3 $4 $5 $6 $7 $8 $9
 
-#C Sharp
+# C Sharp
 elif [ $extension = "cs" ]; then
     confirm
     mcs $1 $2 $3 $4 $5 $6 $7 $8 $9
     mono "$filename.exe"
 
-#Haskell
+# Haskell
 elif [ $extension = "hs" ]; then
     confirm
     ghc $1 $2 $3 $4 $5 $6 $7 $8 $9
     ./$filename
 
-#Rust
+# Rust
 elif [ $extension = "rs" ]; then
     confirm
     rustc $1 $2 $3 $4 $5 $6 $7 $8 $9
     ./$filename
 
-#Java
+# Java
 elif [ $extension = "java" ]; then
     confirm
     javac $1 $2 $3 $4 $5 $6 $7 $8 $9
     java $filename
 
-#Lua
+# Lua
 elif [ $extension = "lua" ]; then
     confirm
     lua $1 $2 $3 $4 $5 $6 $7 $8 $9
 
-#Ruby
+# Ruby
 elif [ $extension = "rb" ]; then
     confirm
     ruby $1 $2 $3 $4 $5 $6 $7 $8 $9
 
-#Javascript
+# Javascript
 elif [ $extension = "js" ]; then
     confirm
     node $1 $2 $3 $4 $5 $6 $7 $8 $9
 
-#PHP
+# PHP
 elif [ $extension = "php" ]; then
     confirm
     php $1 $2 $3 $4 $5 $6 $7 $8 $9
