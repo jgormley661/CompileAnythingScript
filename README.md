@@ -5,11 +5,11 @@ for the given language
 
 C, C++, Python, C-Sharp, Haskell, Rust, Java, Lua, Ruby, Javascript, PHP
 
-to install, make sure you have permission to excute it with
-  $chmod u+x compile
+to install, make sure you have permission to excute it with the following bash command
+chmod u+x compile
 
-and then place it in your /bin/ folder
-  $mv compile /bin/
+and then place it in your /bin/ folder with the following bash command
+mv compile /bin/
   
   
  then to use the script simply use the compile keyword
